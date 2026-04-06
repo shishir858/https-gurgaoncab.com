@@ -1,0 +1,350 @@
+/* Pagination SVG height fix */
+.pagination svg {
+    height: 20px !important;
+    width: 20px !important;
+}
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background: #f8f9fa;
+    color: #222;
+}
+
+/* Primary color and button styles */
+:root {
+    --primary-color: #ffc107;
+    --primary-dark: rgb(20, 21, 67);
+    --highlight-green: rgb(25 135 84);
+}
+
+.text-primary {
+    --bs-text-opacity: 1;
+    color: rgb(255 203 0) !important;
+}
+
+.text-highlight {
+    color: var(--highlight-green) !important;
+}
+
+.bg-highlight {
+    background-color: var(--highlight-green) !important;
+    color: #fff !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    color: #fff !important;
+    border: none;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(237,90,59,0.08);
+    transition: background 0.2s, color 0.2s;
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #014d2a !important;
+    color: #fff !important;
+}
+
+header {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    background: var(--primary-dark);
+    color: #fff;
+}
+
+.nav-link {
+    color: #222;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+/* Nav link hover and active use primary color */
+.nav-link.active, .nav-link:focus, .nav-link:hover {
+    color: var(--primary-color);
+}
+
+
+.btn-dark {
+    background: #222;
+    border: none;
+    font-weight: 500;
+    border-radius: 12px;
+}
+
+.btn-dark:hover {
+    background: #444;
+}
+
+/* Logo styling */
+/* Logo text uses primary color */
+.logo-text {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.logo-sub {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Contact/help styling */
+.header-contact {
+    font-size: 0.95rem;
+    color: #222;
+}
+.header-contact .fw-bold {
+    font-size: 1.1rem;
+}
+
+/* Search and icon buttons */
+.header-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    background: #fff;
+    color: #222;
+    transition: box-shadow 0.2s;
+}
+.header-icon:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .container-fluid {
+        padding: 0 10px;
+    }
+    .btn-dark {
+        padding: 8px 18px;
+        font-size: 1rem;
+    }
+}
+
+footer {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background: var(--primary-dark);
+    color: #fff;
+    padding: 24px 0 12px 0;
+    font-size: 1rem;
+}
+
+/* Add more custom styles for sections, hero, forms, etc. as you build pages */
+
+/* Home Page Layout & Section Styles */
+.hero-slider-wrap {
+    min-height: 580px;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+}
+.hero-search-card {
+    max-width: 1400px;
+    margin-top: 120px;
+}
+
+@media (max-width: 991.98px) {
+    .hero-search-card {
+        margin-top: 60px;
+        padding: 1.5rem 0.5rem;
+    }
+}
+@media (max-width: 767.98px) {
+    .hero-slider-wrap {
+        min-height: 350px;
+    }
+    .hero-search-card {
+        margin-top: 16px;
+        padding: 1rem 0.5rem;
+    }
+
+}
+/* Hero Title Section Styles */
+
+.hero-title-wrap {
+
+    margin-top: 60px;
+
+    text-shadow: 0 2px 8px #000;
+
+}
+
+.carousel-control-next, .carousel-control-prev {
+    position: absolute;
+    top: 150px;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 39px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    transition: opacity .15s ease;
+    background: #ffd726;
+    border-radius: 70%;
+}
+
+/* Vehicle Card Custom Styles */
+.vehicle-card {
+    border-radius: 2rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    background: #fff;
+    transition: box-shadow 0.2s, transform 0.2s;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    min-height: 380px;
+    max-height: 420px;
+    display: flex;
+    flex-direction: column;
+}
+.vehicle-card:hover {
+    box-shadow: 0 8px 32px rgba(237,90,59,0.15);
+    transform: translateY(-4px) scale(1.02);
+}
+.vehicle-card .card-img-top {
+    border-radius: 2rem 2rem 0 0;
+    height: 220px;
+    object-fit: cover;
+}
+.vehicle-card .card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #222;
+}
+.vehicle-card .card-body {
+    flex: 1 1 auto;
+    padding: 1.2rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.vehicle-card .vehicle-type {
+    font-size: 1rem;
+    color: #ffd726;
+    font-weight: 500;
+}
+.vehicle-card .vehicle-price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+}
+.vehicle-card .vehicle-seats {
+    font-size: 0.95rem;
+    color: #888;
+}
+.vehicle-card .vehicle-available {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: #28a745;
+    color: #fff;
+    border-radius: 999px;
+    padding: 0.35rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(40,167,69,0.12);
+}
+.vehicle-card .vehicle-booked {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: #6c757d;
+    color: #fff;
+    border-radius: 999px;
+    padding: 0.35rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(108,117,125,0.12);
+}
+.vehicle-card .vehicle-rating {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: #fff;
+    color: #ffd726;
+    border-radius: 999px;
+    padding: 0.35rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(237,90,59,0.12);
+    display: flex;
+    align-items: center;
+}
+
+/* Cab Fare Table Custom Styles */
+.cab-fare-table {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    background: #fff;
+    margin-bottom: 0;
+}
+.cab-fare-table th {
+    background: #FFC107;
+    color: #222;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    text-align: center;
+    padding: 16px 8px;
+}
+.cab-fare-table td {
+    background: #fff;
+    font-size: 1.05rem;
+    border: none;
+    padding: 14px 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+.cab-fare-table tfoot td {
+    background: #FFF8E1;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #222;
+    border-top: 2px solid #FFC107;
+}
+.cab-fare-table tr {
+    transition: background 0.2s;
+}
+.cab-fare-table tbody tr:hover {
+    background: #FFFDE7;
+}
+.cab-fare-table .text-warning {
+    color: #FF9800 !important;
+}
+.cab-fare-table .fw-bold {
+    font-weight: 700 !important;
+}
