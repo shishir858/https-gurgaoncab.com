@@ -1,5 +1,16 @@
 @extends('layout.app')
 
+@push('meta')
+    <title>{{ $meta_title ?? 'Cab Routes | Gurgaon Cab Service' }}</title>
+    @if(!empty($meta_description))
+        <meta name="description" content="{{ $meta_description }}">
+    @endif
+    @if(!empty($meta_keywords))
+        <meta name="keywords" content="{{ $meta_keywords }}">
+    @endif
+    @include('components.canonical-link')
+@endpush
+
 @section('content')
 <style>
     svg {

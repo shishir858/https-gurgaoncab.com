@@ -1,5 +1,16 @@
 @extends('layout.app')
 
+@push('meta')
+    <title>{{ $meta_title ?? 'Popular Routes | Gurgaon Cab Service' }}</title>
+    @if(!empty($meta_description))
+        <meta name="description" content="{{ $meta_description }}">
+    @endif
+    @if(!empty($meta_keywords))
+        <meta name="keywords" content="{{ $meta_keywords }}">
+    @endif
+    @include('components.canonical-link')
+@endpush
+
 @section('content')
 <!-- Hero Section -->
 <section class="hero-section position-relative w-100" style="background: linear-gradient(rgba(34,34,34,0.6),rgba(34,34,34,0.6)), url('{{ asset('images/popular-routes.jpg') }}') center center / cover no-repeat; min-height: 300px;">

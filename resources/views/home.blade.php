@@ -127,7 +127,7 @@
                             </div>
                             <div class="col-md-4 mb-4">
                                 <div class="service-card shadow rounded-4 overflow-hidden h-100">
-                                    <img src="{{ asset('images/gallery/gallery2.jpg') }}" alt="Local Cab Service" class="w-100" style="height:170px; object-fit:cover;">
+                                    <img src="{{ asset('images/car-rental-india.jpg') }}" alt="Local Cab Service" class="w-100" style="height:170px; object-fit:cover;">
                                     <div class="p-4 text-center">
                                         <h4 class="fw-bold mb-2">Local Cab Service</h4>
                                         <p class="text-secondary mb-3">Looking for a Local Cab in Gurgaon? Enjoy a convenient and reliable ride across Cyber City, MG Road, and Sohna Road with clean cars and professional drivers. Book your local cab service now!</p>
@@ -137,7 +137,7 @@
                             </div>
                             <div class="col-md-4 mb-4">
                                 <div class="service-card shadow rounded-4 overflow-hidden h-100">
-                                    <img src="{{ asset('images/gallery/gallery3.jpg') }}" alt="Airport Transfers" class="w-100" style="height:170px; object-fit:cover;">
+                                    <img src="{{ asset('images/airport-transfers.jpg') }}" alt="Airport Transfers" class="w-100" style="height:170px; object-fit:cover;">
                                     <div class="p-4 text-center">
                                         <h4 class="fw-bold mb-2">Airport Transfers</h4>
                                         <p class="text-secondary mb-3">Need a reliable cab for Delhi airport? Enjoy safe and timely rides with a trusted airport cab in Gurgaon, offering smooth travel to and from Gurgaon. Our professional drivers ensure a comfortable journey for business or leisure. Reserve your cab today!</p>
@@ -147,27 +147,27 @@
                             </div>
                             <div class="col-md-4 mb-4">
                                 <div class="service-card shadow rounded-4 overflow-hidden h-100">
-                                    <img src="{{ asset('images/gallery/gallery4.webp') }}" alt="Local Cab Service" class="w-100" style="height:170px; object-fit:cover;">
+                                    <img src="{{ asset('images/corporate-cab-service.jpg') }}" alt="Corporate Cab Service" class="w-100" style="height:170px; object-fit:cover;">
                                     <div class="p-4 text-center">
-                                        <h4 class="fw-bold mb-2">Local Cab Service</h4>
-                                        <p class="text-secondary mb-3">Looking for a Local Cab in Gurgaon? Enjoy a convenient and reliable ride across Cyber City, MG Road, and Sohna Road with clean cars and professional drivers. Book your local cab service now!</p>
+                                        <h4 class="fw-bold mb-2">Corporate Cab Service</h4>
+                                        <p class="text-secondary mb-3">Need reliable office commute solutions in Gurgaon? Our corporate cab service is ideal for employees, meetings, and daily pickups with professional drivers, clean cars, and on-time arrivals. Book a corporate cab now!</p>
                                         <a href="https://wa.me/{{ preg_replace('/\D/', '', $settings['contact_whatsapp'] ?? '919999999999') }}" target="_blank" class="btn btn-primary rounded-pill px-4">Book Now</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4 mb-4">
                                 <div class="service-card shadow rounded-4 overflow-hidden h-100">
-                                    <img src="{{ asset('images/gallery/gallery5.webp') }}" alt="Airport Transfers" class="w-100" style="height:170px; object-fit:cover;">
+                                    <img src="{{ asset('images/taxi-service-railway-station.png') }}" alt="Railway Station Transfers" class="w-100" style="height:170px; object-fit:cover;">
                                     <div class="p-4 text-center">
-                                        <h4 class="fw-bold mb-2">Airport Transfers</h4>
-                                        <p class="text-secondary mb-3">Need a reliable cab for Delhi airport? Enjoy safe and timely rides with a trusted airport cab in Gurgaon, offering smooth travel to and from Gurgaon. Our professional drivers ensure a comfortable journey for business or leisure. Reserve your cab today!</p>
+                                        <h4 class="fw-bold mb-2">Railway Station Transfers</h4>
+                                        <p class="text-secondary mb-3">Catch your train on time with our reliable railway station pickup & drop service from Gurgaon. We cover New Delhi Railway Station, Old Delhi, Anand Vihar, Gurugram stations, and more with safe, punctual rides. Book now for a stress-free transfer!</p>
                                         <a href="https://wa.me/{{ preg_replace('/\D/', '', $settings['contact_whatsapp'] ?? '919999999999') }}" target="_blank" class="btn btn-primary rounded-pill px-4">Book Now</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4 mb-4">
                                 <div class="service-card shadow rounded-4 overflow-hidden h-100">
-                                    <img src="{{ asset('images/gallery/gallery6.webp') }}" alt="Outstation Trips" class="w-100" style="height:170px; object-fit:cover;">
+                                    <img src="{{ asset('images/outstation-trips.jpg') }}" alt="Outstation Trips" class="w-100" style="height:170px; object-fit:cover;">
                                     <div class="p-4 text-center">
                                         <h4 class="fw-bold mb-2">Outstation Trips</h4>
                                         <p class="text-secondary mb-3">Explore nearby cities with our outstation cab from Gurgaon. Experienced drivers, well-maintained vehicles, & transparent pricing guarantee a smooth, safe journey.</p>

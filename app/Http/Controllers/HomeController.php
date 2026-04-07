@@ -3,17 +3,30 @@
 namespace App\Http\Controllers;
 
 use App\Models\Route;
+use App\Models\Service;
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $featuredServices = \App\Models\Service::where('is_active', true)
+        $featuredServices = Service::where('is_active', true)
             ->orderByDesc('created_at')
             ->take(3)
             ->get();
+
+        $cabServices = Service::where('is_active', true)
+            ->orderByDesc('created_at')
+            ->get()
+            ->unique(function (Service $service) {
+                $title = Str::lower(trim($service->title ?? ''));
+
+                return $title !== '' ? $title : 'slug:' . $service->slug;
+            })
+            ->values()
+            ->take(6);
 
         $featuredVehicles = Vehicle::where('is_active', true)
             ->take(6)
@@ -24,6 +37,6 @@ class HomeController extends Controller
             ->get();
 
         $settings = \App\Models\Setting::pluck('value', 'key')->toArray();
-        return view('home', compact('featuredServices', 'featuredVehicles', 'routes', 'settings'));
+        return view('home', compact('featuredServices', 'cabServices', 'featuredVehicles', 'routes', 'settings'));
     }
 }

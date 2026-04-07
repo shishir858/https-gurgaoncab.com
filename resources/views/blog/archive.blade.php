@@ -8,6 +8,7 @@
     @if(!empty($meta_keywords))
         <meta name="keywords" content="{{ $meta_keywords }}">
     @endif
+    @include('components.canonical-link')
 @endpush
 
 @section('content')
